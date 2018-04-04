@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>50家患教中心甄选</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.css"/>
+    <link rel="stylesheet" href="./css/bootstrapValidator.css"/>
+    <link rel="stylesheet" href="./css/common.css">
+
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrapValidator.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="page-header">
+                <h2 style="text-align: center">50家患教中心甄选</h2>
+                <p style="font-size: 24px;color: #666;text-align: center;margin-top: 24px">报名注册信息</p>
+            </div>
+<!--http://www.huimei.net/login/petrial/register.do  http://www.huimeicare.com/login/petrial/register.do-->
+            <form id="defaultForm" method="post" class="form-horizontal" action="success.json" style="padding: 0 15px">
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">姓名</label>
+                    <div class="col-lg-5">
+                        <input type="text" class="form-control" name="name" placeholder="请输入姓名"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">联系电话</label>
+                    <div class="col-lg-5">
+                        <input type="text" class="form-control" name="tel" placeholder="请输入手机号"  id="phone"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">职务</label>
+                    <div class="col-lg-5">
+                        <input type="text" class="form-control" name="duties" placeholder="请输入您的职务"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">工作单位</label>
+                    <div class="col-lg-5">
+                        <input type="text" class="form-control" name="job" placeholder="请输入工作单位"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">单位地址</label>
+                    <div class="col-lg-5">
+                        <input type="text" class="form-control" name="company" placeholder="请单位地址"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">常用邮箱</label>
+                    <div class="col-lg-5">
+                        <input type="text" class="form-control" name="eamil" placeholder="请输入您的邮箱地址"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">患教中心应用在</label>
+                    <div class="col-lg-5">
+                        <div class="radio">
+                            <label style="display: block;">
+                                <input type="checkbox" name="apply" value="医院"  id="hospital" style="margin-right: 5px"/>医院
+                            </label>
+                            <label style="display:block;" for="depart">
+                                <input type="checkbox" name="apply" value="科室"  id="depart"  style="margin-right: 5px"/>科室
+
+                            </label>
+                            <input type="text" name="applyContent" placeholder="请注明" id="applyContent">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-lg-9 col-lg-offset-3" style="text-align: center;margin-top: 15px">
+                        <button type="submit" class="btn btn-primary submit">提交</button>
+                        <button type="button" class="btn" id="btn2" >提交2</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+   <!-- <img src="images/load.gif" class="load">-->
+    <div id="contact">
+        <p class="title">联系我们</p>
+        <p>企业服务热线：400-000-1885</p>
+        <p>地址：北京市海淀区北太平庄路25号北京豪威大厦501A室</p>
+        <p>邮箱：marketing@huimeihealth.com</p>
+    </div>
+</div>
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				<h4 class="modal-title" id="myModalLabel"></h4>
+			</div>
+			<div class="modal-body" id="myModalContent"></div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>	
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
+
+
+<script type="text/javascript">
+    
+$(document).ready(function() {
+   /* var flag=false;
+    var InterValObj; //timer变量，控制时间
+    var count = 60; //间隔函数，1秒执行
+    var curCount;//当前剩余秒数
+    var n=0;*/
+     
+     
+    $('#myModal').modal('hide');
+    
+    $('#applyContent').keyup(function(){ $('#defaultForm').data('bootstrapValidator').updateStatus('apply', 'NOT_VALIDATED', null).validateField('apply');  });
+    
+    $('#btn2').click(function(){  
+        $('#myModal').modal('show');  
+    	$('#defaultForm')[0].reset();
+    	$('#defaultForm').data('bootstrapValidator').resetForm();
+    });  
+     
+    $('#defaultForm')
+        .bootstrapValidator({
+            message: 'This value is not valid',
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                name: {
+                    validators: {
+                        notEmpty: {
+                            message: '用户名不能为空'
+                        }
+
+                    }
+                },
+                tel: {
+                    validators: {
+                        notEmpty: {
+                            message: '请输入正确的手机号'
+                        },
+                        regexp: {
+                            regexp: /^1\d{10}$/,
+                            message: '请输入正确的手机号'
+                        }
+                    }
+                },
+
+                duties: {
+                    validators: {
+                        notEmpty: {
+                            message: '职务必填'
+                        }
+
+                    }
+                },
+                job: {
+                    validators: {
+                        notEmpty: {
+                            message: '工作单位必填'
+                        }
+
+                    }
+                },
+                company: {
+                    validators: {
+                        notEmpty: {
+                            message: '单位地址必填'
+                        }
+
+                    }
+                },
+
+                eamil: {
+                    validators: {
+                        notEmpty: {
+                            message: '邮箱格式不正确'
+                        },
+                        emailAddress: {
+                            message: '邮箱格式不正确'
+                        }
+                    }
+                },        
+                apply: {
+                    validators: {
+                        notEmpty: {
+                            message: '请选择应用'
+                        },
+                        callback:{
+                        	  message : '请注明科室',
+                            callback:function (value,validator) {
+                                if($('#depart').is(':checked') && $('#applyContent').val().trim()=='')
+                                	return false;
+                                return true;
+                            }
+                        }
+                    }
+                }
+
+            }
+        })
+        .on('success.form.bv', function(e) {
+            //window.location.reload()
+            // Prevent form submission
+            e.preventDefault();
+
+            // Get the form instance
+            var $form = $(e.target);
+
+            // Get the BootstrapValidator instance
+            var bv = $form.data('bootstrapValidator');
+
+            // Use Ajax to submit form data
+
+            $.post($form.attr('action'), $form.serialize(), function(data) {
+                 if(data.code=='1'){
+                    $('#myModalLabel').html('恭喜你');
+                    $('#myModalContent').html('报名信息已成功提交,请保持电话畅通，稍后会有患教中心服务人员与您联系');
+                    $("#myModal").modal('show');
+                    $('#defaultForm')[0].reset();
+                    $('#defaultForm')[0].resetForm();
+                 }else {
+                    $('#myModalLabel').html('出错了');
+                    $('#myModalContent').html(data.msg);
+                    $("#myModal").modal('show');
+                 }
+            },'json');
+        });
+
+
+
+
+
+});
+
+
+
+
+</script>
+</body>
+</html>

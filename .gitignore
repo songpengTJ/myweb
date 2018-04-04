@@ -1,0 +1,78 @@
+cfg/CrashpadMetrics-active.pma
+cfg/Local State
+cfg/chrome_shutdown_ms.txt
+cfg/BrowserMetrics/BrowserMetrics-5AC42E79-17A0.pma
+cfg/Crashpad/metadata
+cfg/Crashpad/settings.dat
+cfg/Default/Cookies
+cfg/Default/Cookies-journal
+cfg/Default/Current Session
+cfg/Default/Current Tabs
+cfg/Default/Favicons
+cfg/Default/Favicons-journal
+cfg/Default/History
+cfg/Default/History Provider Cache
+cfg/Default/History-journal
+cfg/Default/Login Data
+cfg/Default/Login Data-journal
+cfg/Default/Network Action Predictor
+cfg/Default/Network Action Predictor-journal
+cfg/Default/Network Persistent State
+cfg/Default/Preferences
+cfg/Default/README
+cfg/Default/Secure Preferences
+cfg/Default/Shortcuts
+cfg/Default/Shortcuts-journal
+cfg/Default/Top Sites
+cfg/Default/Top Sites-journal
+cfg/Default/Translate Ranker Model
+cfg/Default/Visited Links
+cfg/Default/Web Data
+cfg/Default/Web Data-journal
+cfg/Default/previews_opt_out.db
+cfg/Default/previews_opt_out.db-journal
+cfg/Default/Cache/data_0
+cfg/Default/Cache/data_1
+cfg/Default/Cache/data_2
+cfg/Default/Cache/data_3
+cfg/Default/Cache/index
+cfg/Default/Download Service/EntryDB/000003.log
+cfg/Default/Download Service/EntryDB/CURRENT
+cfg/Default/Download Service/EntryDB/LOCK
+cfg/Default/Download Service/EntryDB/LOG
+cfg/Default/Download Service/EntryDB/MANIFEST-000001
+cfg/Default/Extension State/000003.log
+cfg/Default/Extension State/CURRENT
+cfg/Default/Extension State/LOCK
+cfg/Default/Extension State/LOG
+cfg/Default/Extension State/MANIFEST-000001
+cfg/Default/GPUCache/data_0
+cfg/Default/GPUCache/data_1
+cfg/Default/GPUCache/data_2
+cfg/Default/GPUCache/data_3
+cfg/Default/GPUCache/index
+cfg/Default/Storage/ext/gfdkimpbcpahaombhbimeihdjnejgicl/def/GPUCache/data_0
+cfg/Default/Storage/ext/gfdkimpbcpahaombhbimeihdjnejgicl/def/GPUCache/data_1
+cfg/Default/Storage/ext/gfdkimpbcpahaombhbimeihdjnejgicl/def/GPUCache/data_2
+cfg/Default/Storage/ext/gfdkimpbcpahaombhbimeihdjnejgicl/def/GPUCache/data_3
+cfg/Default/Storage/ext/gfdkimpbcpahaombhbimeihdjnejgicl/def/GPUCache/index
+cfg/Default/Sync Data/LevelDB/000003.log
+cfg/Default/Sync Data/LevelDB/CURRENT
+cfg/Default/Sync Data/LevelDB/LOCK
+cfg/Default/Sync Data/LevelDB/LOG
+cfg/Default/Sync Data/LevelDB/MANIFEST-000001
+cfg/Default/Thumbnails/000003.log
+cfg/Default/Thumbnails/CURRENT
+cfg/Default/Thumbnails/LOCK
+cfg/Default/Thumbnails/LOG
+cfg/Default/Thumbnails/MANIFEST-000001
+cfg/Default/data_reduction_proxy_leveldb/000003.log
+cfg/Default/data_reduction_proxy_leveldb/CURRENT
+cfg/Default/data_reduction_proxy_leveldb/LOCK
+cfg/Default/data_reduction_proxy_leveldb/LOG
+cfg/Default/data_reduction_proxy_leveldb/MANIFEST-000002
+cfg/ShaderCache/GPUCache/data_0
+cfg/ShaderCache/GPUCache/data_1
+cfg/ShaderCache/GPUCache/data_2
+cfg/ShaderCache/GPUCache/data_3
+cfg/ShaderCache/GPUCache/index
